@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0D0608">
+  <title>Página não encontrada · Mokshyaa</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ============================================
+       BODY — Fundo escuro, centralização total
+       ============================================ */
+    body {
+      background: #0D0608;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ============================================
+       CONTAINER 404 — Layout vertical centralizado
+       ============================================ */
+    .not-found {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    /* Linha 1: "Essa página não existe." */
+    .nf-line-1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #F5ECD7;
+      line-height: 1.4;
+    }
+
+    /* Linha 2: "但你存在。" (destaque dourado) */
+    .nf-line-2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      color: #C9A84C;
+      line-height: 1.2;
+    }
+
+    /* Linha 3: "Mas você existe." */
+    .nf-line-3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 3vw, 1.8rem);
+      color: #8A7A6A;
+      line-height: 1.4;
+    }
+
+    /* ============================================
+       BOTÃO OUTLINE — Voltar ao início
+       ============================================ */
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid #C9A84C;
+      color: #C9A84C;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 300ms ease, color 300ms ease, transform 300ms ease;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-outline:hover {
+      background: #C9A84C;
+      color: #0D0608;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found">
+    <p class="nf-line-1">Essa página não existe.</p>
+    <p class="nf-line-2">但你存在。</p>
+    <p class="nf-line-3">Mas você existe.</p>
+    <a href="index.html" class="btn-outline">Voltar ao início</a>
+  </div>
+</body>
+</html>
