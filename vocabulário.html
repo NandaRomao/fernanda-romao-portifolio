@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vocabulário Dev em Mandarim — 76 termos técnicos em PT · 中文">
+  <meta name="author" content="Fernanda Romão">
+  <meta name="theme-color" content="#0D0608">
+  
+  <meta property="og:title" content="词汇表 · Vocabulário Dev em Mandarim">
+  <meta property="og:description" content="76 termos técnicos para desenvolvedores em Português e 中文">
+  <meta property="og:type" content="website">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  
+  <title>词汇表 · Vocabulário Dev em Mandarim · Mokshyaa</title>
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>词</text></svg>">
+
+  <style>
+    /* ============================================
+       === VARIÁVEIS ===
+       ============================================ */
+    :root {
+      --bg-primary: #0D0608;
+      --bg-surface: #3D0C11;
+      --bg-deep: #2A0A0A;
+      --text-primary: #F5ECD7;
+      --text-muted: #8A7A6A;
+      --accent-gold: #C9A84C;
+      --accent-hover: #E2BC6A;
+      --transition-fast: 200ms ease;
+      --transition-mid: 300ms ease;
+      --transition-slow: 600ms ease;
+    }
+
+    /* ============================================
+       === RESET & BASE ===
+       ============================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::selection {
+      background: #C9A84C;
+      color: #0D0608;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ============================================
+       === NAVEGAÇÃO ===
+       ============================================ */
+    .vocab-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      transition: var(--transition-mid);
+    }
+
+    .vocab-nav.scrolled {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(13, 6, 8, 0.85);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: #C9A84C;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-back {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #8A7A6A;
+      text-decoration: none;
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-back:hover {
+      color: #C9A84C;
+    }
+
+    /* ============================================
+       === HERO ===
+       ============================================ */
+    .vocab-hero {
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-deep);
+      padding: 8rem 2rem 4rem;
+    }
+
+    /* Caracteres decorativos de fundo */
+    .vocab-hero::before {
+      content: '词';
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12rem;
+      color: #C9A84C;
+      opacity: 0.04;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .vocab-hero::after {
+      content: '汇';
+      position: absolute;
+      bottom: 15%;
+      right: 8%;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 10rem;
+      color: #C9A84C;
+      opacity: 0.04;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .hero-deco-1 {
+      position: absolute;
+      top: 20%;
+      right: 15%;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      color: #C9A84C;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .hero-deco-2 {
+      position: absolute;
+      bottom: 25%;
+      left: 12%;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      color: #C9A84C;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .hero-deco-3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15rem;
+      color: #C9A84C;
+      opacity: 0.02;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 8vw, 6rem);
+      color: #C9A84C;
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeIn 0.8s ease forwards;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: #F5ECD7;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeIn 0.8s ease 0.2s forwards;
+    }
+
+    .hero-subtitle-2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      color: #8A7A6A;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeIn 0.8s ease 0.4s forwards;
+    }
+
+    .hero-stats {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #8A7A6A;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeIn 0.8s ease 0.6s forwards;
+    }
+
+    @keyframes heroFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ============================================
+       === CONTROLES — BUSCA + FILTROS ===
+       ============================================ */
+    .vocab-controls {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .vocab-search-wrapper {
+      position: relative;
+    }
+
+    #vocabSearch {
+      width: 100%;
+      background: rgba(61, 12, 17, 0.5);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 6px;
+      padding: 1rem 1rem 1rem 3rem;
+      color: #F5ECD7;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      outline: none;
+      transition: var(--transition-mid);
+    }
+
+    #vocabSearch:focus {
+      border-color: #C9A84C;
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+    }
+
+    #vocabSearch::placeholder {
+      color: #8A7A6A;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #8A7A6A;
+      font-size: 1.2rem;
+      pointer-events: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .vocab-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid var(--bg-surface);
+      background: transparent;
+      color: var(--text-muted);
+      transition: var(--transition-fast);
+    }
+
+    .filter-btn:hover {
+      border-color: rgba(201, 168, 76, 0.4);
+      color: #F5ECD7;
+    }
+
+    .filter-btn.active {
+      background: var(--accent-gold);
+      color: #0D0608;
+      border-color: var(--accent-gold);
+    }
+
+    /* ============================================
+       === CONTADOR ===
+       ============================================ */
+    .vocab-count {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: #8A7A6A;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      padding: 0 2rem;
+    }
+
+    .vocab-count-empty {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #8A7A6A;
+      text-align: center;
+      padding: 3rem 2rem;
+      font-style: italic;
+    }
+
+    /* ============================================
+       === GRID DE TERMOS ===
+       ============================================ */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .vocab-card {
+      background: var(--bg-surface);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border: 1px solid transparent;
+      transition: var(--transition-fast);
+      position: relative;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .vocab-card.reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 400ms ease, transform 400ms ease, border-color 200ms ease;
+    }
+
+    .vocab-card:hover {
+      border-color: rgba(201, 168, 76, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .vocab-card.hidden {
+      display: none;
+    }
+
+    .vocab-zh {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #C9A84C;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      line-height: 1;
+    }
+
+    .vocab-pt {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #F5ECD7;
+      margin-bottom: 0.3rem;
+      padding-right: 3rem;
+    }
+
+    .vocab-en {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #8A7A6A;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .vocab-pinyin {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(138, 122, 106, 0.6);
+      margin-bottom: 0.8rem;
+    }
+
+    .vocab-category-badge {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: #8A7A6A;
+      background: rgba(138, 122, 106, 0.1);
+      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+
+    /* ============================================
+       === RODAPÉ ===
+       ============================================ */
+    .vocab-footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+      text-align: center;
+    }
+
+    .vocab-footer a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #8A7A6A;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .vocab-footer a:hover {
+      color: #C9A84C;
+    }
+
+    /* ============================================
+       === SCROLL TO TOP ===
+       ============================================ */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      background: rgba(13, 6, 8, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #C9A84C;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+      border-color: #C9A84C;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       === RESPONSIVO ===
+       ============================================ */
+    @media (max-width: 1024px) {
+      .vocab-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .vocab-hero {
+        min-height: 50vw;
+        padding: 6rem 1.5rem 3rem;
+      }
+
+      .vocab-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .vocab-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .vocab-controls {
+        padding: 0 1.5rem;
+      }
+
+      .vocab-grid {
+        padding: 0 1.5rem 3rem;
+      }
+
+      .vocab-zh {
+        position: static;
+        display: block;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .vocab-pt {
+        padding-right: 0;
+      }
+
+      .scroll-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #vocabSearch {
+        font-size: 0.9rem;
+      }
+
+      .hero-deco-1,
+      .hero-deco-2,
+      .hero-deco-3,
+      .vocab-hero::before,
+      .vocab-hero::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ==========================================
+       NAVEGAÇÃO
+       ========================================== -->
+  <nav class="vocab-nav" id="vocabNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Mokshyaa</a>
+      <a href="index.html" class="nav-back">← Voltar ao portfólio</a>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO
+       ========================================== -->
+  <header class="vocab-hero">
+    <div class="hero-deco-1">技</div>
+    <div class="hero-deco-2">术</div>
+    <div class="hero-deco-3">学习</div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">词汇表</h1>
+      <p class="hero-subtitle">Vocabulário Dev em Mandarim</p>
+      <p class="hero-subtitle-2">Technical Dictionary · 技术词汇</p>
+      <p class="hero-stats">76 termos · 2 idiomas · 8 categorias</p>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       CONTROLES — BUSCA + FILTROS
+       ========================================== -->
+  <div class="vocab-controls">
+    <div class="vocab-search-wrapper">
+      <span class="search-icon">⌕</span>
+      <input 
+        type="search" 
+        id="vocabSearch" 
+        placeholder="Buscar termo... 搜索"
+        aria-label="Buscar no vocabulário"
+        autocomplete="off"
+      >
+    </div>
+    
+    <div class="vocab-filters" id="vocabFilters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="geral">Geral</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="banco-de-dados">Banco de Dados</button>
+      <button class="filter-btn" data-filter="git">Git</button>
+      <button class="filter-btn" data-filter="redes">Redes</button>
+      <button class="filter-btn" data-filter="seguranca">Segurança</button>
+      <button class="filter-btn" data-filter="giria">Gíria Tech</button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       CONTADOR
+       ========================================== -->
+  <p class="vocab-count" id="vocabCount">Exibindo 76 de 76 termos</p>
+  <p class="vocab-count-empty" id="vocabEmpty" hidden>
+    Nenhum termo encontrado · 没有找到
+  </p>
+
+  <!-- ==========================================
+       GRID DE TERMOS
+       ========================================== -->
+  <main class="vocab-grid" id="vocabGrid">
+    
+    <!-- === GERAL (53 termos) === -->
+    
+    <article class="vocab-card reveal" data-category="geral" data-pt="电脑" data-zh="电脑" data-pinyin="diàn nǎo">
+      <div class="vocab-zh">电脑</div>
+      <div class="vocab-pt">computador</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">diàn nǎo</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="网络" data-zh="网络" data-pinyin="wǎng luò">
+      <div class="vocab-zh">网络</div>
+      <div class="vocab-pt">internet, rede</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">wǎng luò</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="软件" data-zh="软件" data-pinyin="ruǎn jiàn">
+      <div class="vocab-zh">软件</div>
+      <div class="vocab-pt">software</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">ruǎn jiàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="硬件" data-zh="硬件" data-pinyin="yìng jiàn">
+      <div class="vocab-zh">硬件</div>
+      <div class="vocab-pt">hardware</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">yìng jiàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="程序" data-zh="程序" data-pinyin="chéng xù">
+      <div class="vocab-zh">程序</div>
+      <div class="vocab-pt">programa, código</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">chéng xù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="代码" data-zh="代码" data-pinyin="dài mǎ">
+      <div class="vocab-zh">代码</div>
+      <div class="vocab-pt">código (de programação)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">dài mǎ</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="开发" data-zh="开发" data-pinyin="kāi fā">
+      <div class="vocab-zh">开发</div>
+      <div class="vocab-pt">desenvolver, desenvolvimento</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">kāi fā</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="应用" data-zh="应用" data-pinyin="yìng yòng">
+      <div class="vocab-zh">应用</div>
+      <div class="vocab-pt">aplicativo, aplicação</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">yìng yòng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="服务器" data-zh="服务器" data-pinyin="fú wù qì">
+      <div class="vocab-zh">服务器</div>
+      <div class="vocab-pt">servidor</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">fú wù qì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="云计算" data-zh="云计算" data-pinyin="yún jì suàn">
+      <div class="vocab-zh">云计算</div>
+      <div class="vocab-pt">computação em nuvem</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">yún jì suàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="人工智能" data-zh="人工智能" data-pinyin="rén gōng zhì néng">
+      <div class="vocab-zh">人工智能</div>
+      <div class="vocab-pt">inteligência artificial</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">rén gōng zhì néng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="大数据" data-zh="大数据" data-pinyin="dà shù jù">
+      <div class="vocab-zh">大数据</div>
+      <div class="vocab-pt">big data</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">dà shù jù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="区块链" data-zh="区块链" data-pinyin="qū kuài liàn">
+      <div class="vocab-zh">区块链</div>
+      <div class="vocab-pt">blockchain</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">qū kuài liàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="升级" data-zh="升级" data-pinyin="shēng jí">
+      <div class="vocab-zh">升级</div>
+      <div class="vocab-pt">atualizar, upgrade</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shēng jí</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="下载" data-zh="下载" data-pinyin="xià zǎi">
+      <div class="vocab-zh">下载</div>
+      <div class="vocab-pt">baixar, download</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">xià zǎi</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="上传" data-zh="上传" data-pinyin="shàng chuán">
+      <div class="vocab-zh">上传</div>
+      <div class="vocab-pt">enviar, upload</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shàng chuán</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="链接" data-zh="链接" data-pinyin="liàn jiē">
+      <div class="vocab-zh">链接</div>
+      <div class="vocab-pt">link, conexão</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">liàn jiē</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="账号" data-zh="账号" data-pinyin="zhàng hào">
+      <div class="vocab-zh">账号</div>
+      <div class="vocab-pt">conta (de usuário)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zhàng hào</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="密码" data-zh="密码" data-pinyin="mì mǎ">
+      <div class="vocab-zh">密码</div>
+      <div class="vocab-pt">senha</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">mì mǎ</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="登录" data-zh="登录" data-pinyin="dēng lù">
+      <div class="vocab-zh">登录</div>
+      <div class="vocab-pt">login, entrar</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">dēng lù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="注册" data-zh="注册" data-pinyin="zhù cè">
+      <div class="vocab-zh">注册</div>
+      <div class="vocab-pt">registrar, cadastro</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zhù cè</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="退出" data-zh="退出" data-pinyin="tuì chū">
+      <div class="vocab-zh">退出</div>
+      <div class="vocab-pt">sair, logout</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">tuì chū</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="界面" data-zh="界面" data-pinyin="jiè miàn">
+      <div class="vocab-zh">界面</div>
+      <div class="vocab-pt">interface</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">jiè miàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="用户" data-zh="用户" data-pinyin="yòng hù">
+      <div class="vocab-zh">用户</div>
+      <div class="vocab-pt">usuário</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">yòng hù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="数据" data-zh="数据" data-pinyin="shù jù">
+      <div class="vocab-zh">数据</div>
+      <div class="vocab-pt">dados</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shù jù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="备份" data-zh="备份" data-pinyin="bèi fèn">
+      <div class="vocab-zh">备份</div>
+      <div class="vocab-pt">backup</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">bèi fèn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="加密" data-zh="加密" data-pinyin="jiā mì">
+      <div class="vocab-zh">加密</div>
+      <div class="vocab-pt">criptografar, encriptar</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">jiā mì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="解密" data-zh="解密" data-pinyin="jiě mì">
+      <div class="vocab-zh">解密</div>
+      <div class="vocab-pt">descriptografar, decifrar</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">jiě mì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="智能" data-zh="智能" data-pinyin="zhì néng">
+      <div class="vocab-zh">智能</div>
+      <div class="vocab-pt">inteligente (smart)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zhì néng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="机器人" data-zh="机器人" data-pinyin="jī qì rén">
+      <div class="vocab-zh">机器人</div>
+      <div class="vocab-pt">robô</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">jī qì rén</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="算法" data-zh="算法" data-pinyin="suàn fǎ">
+      <div class="vocab-zh">算法</div>
+      <div class="vocab-pt">algoritmo</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">suàn fǎ</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="平台" data-zh="平台" data-pinyin="píng tái">
+      <div class="vocab-zh">平台</div>
+      <div class="vocab-pt">plataforma</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">píng tái</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="变量" data-zh="变量" data-pinyin="biàn liàng">
+      <div class="vocab-zh">变量</div>
+      <div class="vocab-pt">variável</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">biàn liàng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="函数" data-zh="函数" data-pinyin="hán shù">
+      <div class="vocab-zh">函数</div>
+      <div class="vocab-pt">função (programação)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">hán shù</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="循环" data-zh="循环" data-pinyin="xún huán">
+      <div class="vocab-zh">循环</div>
+      <div class="vocab-pt">loop, ciclo</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">xún huán</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="调试" data-zh="调试" data-pinyin="tiáo shì">
+      <div class="vocab-zh">调试</div>
+      <div class="vocab-pt">depurar, debug</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">tiáo shì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="编译" data-zh="编译" data-pinyin="biān yì">
+      <div class="vocab-zh">编译</div>
+      <div class="vocab-pt">compilar</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">biān yì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="条件" data-zh="条件" data-pinyin="tiáo jiàn">
+      <div class="vocab-zh">条件</div>
+      <div class="vocab-pt">condição (programação)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">tiáo jiàn</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="类" data-zh="类" data-pinyin="lèi">
+      <div class="vocab-zh">类</div>
+      <div class="vocab-pt">classe (POO)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">lèi</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="对象" data-zh="对象" data-pinyin="duì xiàng">
+      <div class="vocab-zh">对象</div>
+      <div class="vocab-pt">objeto (POO)/alvo</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">duì xiàng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="文档" data-zh="文档" data-pinyin="wén dàng">
+      <div class="vocab-zh">文档</div>
+      <div class="vocab-pt">documentação</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">wén dàng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="部署" data-zh="部署" data-pinyin="bù shǔ">
+      <div class="vocab-zh">部署</div>
+      <div class="vocab-pt">deploy, implantar</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">bù shǔ</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="环境" data-zh="环境" data-pinyin="huán jìng">
+      <div class="vocab-zh">环境</div>
+      <div class="vocab-pt">ambiente (dev/prod/test)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">huán jìng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="日志" data-zh="日志" data-pinyin="rì zhì">
+      <div class="vocab-zh">日志</div>
+      <div class="vocab-pt">log, registro</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">rì zhì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="容器" data-zh="容器" data-pinyin="róng qì">
+      <div class="vocab-zh">容器</div>
+      <div class="vocab-pt">container (Docker)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">róng qì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="面试" data-zh="面试" data-pinyin="miàn shì">
+      <div class="vocab-zh">面试</div>
+      <div class="vocab-pt">entrevista (de emprego)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">miàn shì</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="作品集" data-zh="作品集" data-pinyin="zuò pǐn jí">
+      <div class="vocab-zh">作品集</div>
+      <div class="vocab-pt">portfólio</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zuò pǐn jí</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="实习生" data-zh="实习生" data-pinyin="shí xí shēng">
+      <div class="vocab-zh">实习生</div>
+      <div class="vocab-pt">estagiário/a</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shí xí shēng</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="geral" data-pt="自由职业者" data-zh="自由职业者" data-pinyin="zì yóu zhí yè zhě">
+      <div class="vocab-zh">自由职业者</div>
+      <div class="vocab-pt">freelancer</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zì yóu zhí yè zhě</div>
+      <span class="vocab-category-badge">Geral</span>
+    </article>
+
+    <!-- === FRONTEND (1 termo) === -->
+
+    <article class="vocab-card reveal" data-category="frontend" data-pt="前端" data-zh="前端" data-pinyin="qián duān">
+      <div class="vocab-zh">前端</div>
+      <div class="vocab-pt">front-end</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">qián duān</div>
+      <span class="vocab-category-badge">Frontend</span>
+    </article>
+
+    <!-- === BACKEND (1 termo) === -->
+
+    <article class="vocab-card reveal" data-category="backend" data-pt="后端" data-zh="后端" data-pinyin="hòu duān">
+      <div class="vocab-zh">后端</div>
+      <div class="vocab-pt">back-end</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">hòu duān</div>
+      <span class="vocab-category-badge">Backend</span>
+    </article>
+
+    <!-- === BANCO DE DADOS (2 termos) === -->
+
+    <article class="vocab-card reveal" data-category="banco-de-dados" data-pt="数据库" data-zh="数据库" data-pinyin="shù jù kù">
+      <div class="vocab-zh">数据库</div>
+      <div class="vocab-pt">banco de dados</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shù jù kù</div>
+      <span class="vocab-category-badge">Banco de Dados</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="banco-de-dados" data-pt="查询" data-zh="查询" data-pinyin="chá xún">
+      <div class="vocab-zh">查询</div>
+      <div class="vocab-pt">consulta, query</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">chá xún</div>
+      <span class="vocab-category-badge">Banco de Dados</span>
+    </article>
+
+    <!-- === GIT (4 termos) === -->
+
+    <article class="vocab-card reveal" data-category="git" data-pt="仓库" data-zh="仓库" data-pinyin="cāng kù">
+      <div class="vocab-zh">仓库</div>
+      <div class="vocab-pt">repositório (Git)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">cāng kù</div>
+      <span class="vocab-category-badge">Git</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="git" data-pt="提交" data-zh="提交" data-pinyin="tí jiāo">
+      <div class="vocab-zh">提交</div>
+      <div class="vocab-pt">commit (Git)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">tí jiāo</div>
+      <span class="vocab-category-badge">Git</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="git" data-pt="分支" data-zh="分支" data-pinyin="fēn zhī">
+      <div class="vocab-zh">分支</div>
+      <div class="vocab-pt">branch (Git)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">fēn zhī</div>
+      <span class="vocab-category-badge">Git</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="git" data-pt="合并" data-zh="合并" data-pinyin="hé bìng">
+      <div class="vocab-zh">合并</div>
+      <div class="vocab-pt">merge (Git)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">hé bìng</div>
+      <span class="vocab-category-badge">Git</span>
+    </article>
+
+    <!-- === REDES (1 termo) === -->
+
+    <article class="vocab-card reveal" data-category="redes" data-pt="防火墙" data-zh="防火墙" data-pinyin="fáng huǒ qiáng">
+      <div class="vocab-zh">防火墙</div>
+      <div class="vocab-pt">firewall</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">fáng huǒ qiáng</div>
+      <span class="vocab-category-badge">Redes</span>
+    </article>
+
+    <!-- === SEGURANÇA (3 termos) === -->
+
+    <article class="vocab-card reveal" data-category="seguranca" data-pt="攻击" data-zh="攻击" data-pinyin="gōng jī">
+      <div class="vocab-zh">攻击</div>
+      <div class="vocab-pt">ataque (cibersegurança)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">gōng jī</div>
+      <span class="vocab-category-badge">Segurança</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="seguranca" data-pt="身份验证" data-zh="身份验证" data-pinyin="shēn fèn yàn zhèng">
+      <div class="vocab-zh">身份验证</div>
+      <div class="vocab-pt">autenticação</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shēn fèn yàn zhèng</div>
+      <span class="vocab-category-badge">Segurança</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="seguranca" data-pt="渗透测试" data-zh="渗透测试" data-pinyin="shèn tòu cè shì">
+      <div class="vocab-zh">渗透测试</div>
+      <div class="vocab-pt">pentest, teste de penetração</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">shèn tòu cè shì</div>
+      <span class="vocab-category-badge">Segurança</span>
+    </article>
+
+    <!-- === GÍRIA TECH (11 termos) === -->
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="666" data-zh="666" data-pinyin="liù liù liù">
+      <div class="vocab-zh">666</div>
+      <div class="vocab-pt">incrível, que demais! (gíria)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">liù liù liù</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="886" data-zh="886" data-pinyin="bā bā liù">
+      <div class="vocab-zh">886</div>
+      <div class="vocab-pt">tchau, até mais (gíria de chat)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">bā bā liù</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="菜鸟" data-zh="菜鸟" data-pinyin="cài niǎo">
+      <div class="vocab-zh">菜鸟</div>
+      <div class="vocab-pt">noob, iniciante (gíria)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">cài niǎo</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="挂机" data-zh="挂机" data-pinyin="guà jī">
+      <div class="vocab-zh">挂机</div>
+      <div class="vocab-pt">AFK — away from keyboard (gíria de games)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">guà jī</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="爆火" data-zh="爆火" data-pinyin="bào huǒ">
+      <div class="vocab-zh">爆火</div>
+      <div class="vocab-pt">viralizar (gíria de internet)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">bào huǒ</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="喷子" data-zh="喷子" data-pinyin="pēn zi">
+      <div class="vocab-zh">喷子</div>
+      <div class="vocab-pt">troll, hater (gíria de internet)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">pēn zi</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="直播" data-zh="直播" data-pinyin="zhí bō">
+      <div class="vocab-zh">直播</div>
+      <div class="vocab-pt">live, transmissão ao vivo</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">zhí bō</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="点赞" data-zh="点赞" data-pinyin="diǎn zàn">
+      <div class="vocab-zh">点赞</div>
+      <div class="vocab-pt">curtir, like</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">diǎn zàn</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="粉丝" data-zh="粉丝" data-pinyin="fěn sī">
+      <div class="vocab-zh">粉丝</div>
+      <div class="vocab-pt">fã, seguidor</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">fěn sī</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="网红" data-zh="网红" data-pinyin="wǎng hóng">
+      <div class="vocab-zh">网红</div>
+      <div class="vocab-pt">influencer, famoso na internet</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">wǎng hóng</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+    <article class="vocab-card reveal" data-category="giria" data-pt="卡顿" data-zh="卡顿" data-pinyin="kǎ dùn">
+      <div class="vocab-zh">卡顿</div>
+      <div class="vocab-pt">lag, travar (games/streaming)</div>
+      <div class="vocab-en">—</div>
+      <div class="vocab-pinyin">kǎ dùn</div>
+      <span class="vocab-category-badge">Gíria Tech</span>
+    </article>
+
+  </main>
+
+  <!-- ==========================================
+       RODAPÉ
+       ========================================== -->
+  <footer class="vocab-footer">
+    <a href="index.html">← Voltar ao portfólio · Mokshyaa 2026</a>
+  </footer>
+
+  <!-- ==========================================
+       SCROLL TO TOP
+       ========================================== -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
+  <script>
+    // ==========================================
+    // === NAVBAR SCROLL ===
+    // ==========================================
+    (function() {
+      const nav = document.getElementById('vocabNav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+    })();
+
+    // ==========================================
+    // === SCROLL REVEAL ===
+    // ==========================================
+    (function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            // Stagger por grupo de 6
+            const delay = (index % 6) * 0.05;
+            entry.target.style.transitionDelay = delay + 's';
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(el => observer.observe(el));
+    })();
+
+    // ==========================================
+    // === SEARCH + FILTER ===
+    // ==========================================
+    (function() {
+      const searchInput = document.getElementById('vocabSearch');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.vocab-card');
+      const countEl = document.getElementById('vocabCount');
+      const emptyEl = document.getElementById('vocabEmpty');
+      
+      let activeFilter = 'all';
+      let searchQuery = '';
+      let searchTimeout;
+
+      // Função para normalizar texto (remove acentos)
+      function normalize(str) {
+        return str.toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '');
+      }
+
+      // Função para aplicar filtros
+      function applyFilters() {
+        let visibleCount = 0;
+        const normalizedQuery = normalize(searchQuery);
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const pt = normalize(card.getAttribute('data-pt') || '');
+          const zh = normalize(card.getAttribute('data-zh') || '');
+          const pinyin = normalize(card.getAttribute('data-pinyin') || '');
+
+          // Verifica categoria
+          const categoryMatch = activeFilter === 'all' || category === activeFilter;
+          
+          // Verifica busca
+          const searchMatch = !normalizedQuery || 
+            pt.includes(normalizedQuery) || 
+            zh.includes(normalizedQuery) || 
+            pinyin.includes(normalizedQuery);
+
+          if (categoryMatch && searchMatch) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Atualiza contador
+        if (visibleCount === 0) {
+          countEl.hidden = true;
+          emptyEl.hidden = false;
+        } else {
+          countEl.hidden = false;
+          emptyEl.hidden = true;
+          countEl.textContent = `Exibindo ${visibleCount} de 76 termos`;
+        }
+      }
+
+      // Busca com debounce
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          searchQuery = e.target.value;
+          applyFilters();
+        }, 200);
+      });
+
+      // Filtros de categoria
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilter = btn.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+    })();
+
+    // ==========================================
+    // === SCROLL TO TOP ===
+    // ==========================================
+    (function() {
+      const btn = document.getElementById('scrollTopBtn');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      });
+
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>

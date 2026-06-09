@@ -37,7 +37,7 @@
   =========================================== -->
   <header id="navbar">
     <nav class="nav-container" aria-label="Navegação principal">
-      <a href="#hero" class="nav-logo">Mokshyaa</a>
+      <a href="#hero" class="nav-logo">Fernanda Romão</a>
  
       <ul class="nav-links">
         <li><a href="#hero" class="nav-link active">Home</a></li>
@@ -46,7 +46,7 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#servicos" class="nav-link">Serviços</a></li>
         <li><a href="#contato" class="nav-link">Contato</a></li>
-        <li><a href="#contato" class="btn-outline nav-hire">Hire Me</a></li>
+        <li><a href="#contato" class="btn-outline nav-hire">Contrate-me</a></li>
       </ul>
  
       <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -65,7 +65,7 @@
     <a href="#skills" class="mobile-link">Skills</a>
     <a href="#servicos" class="mobile-link">Serviços</a>
     <a href="#contato" class="mobile-link">Contato</a>
-    <a href="#contato" class="btn-outline">Hire Me</a>
+    <a href="#contato" class="btn-outline">Contrate-me</a>
   </div>
  
   <!-- ==========================================
@@ -80,17 +80,11 @@
       <canvas id="hero-canvas"></canvas>
  
       <div class="hero-content">
-        <h1 class="hero-name">
-          <span style="animation-delay:0.05s">F</span><span style="animation-delay:0.10s">e</span><span style="animation-delay:0.15s">r</span><span style="animation-delay:0.20s">n</span><span style="animation-delay:0.25s">a</span><span style="animation-delay:0.30s">n</span><span style="animation-delay:0.35s">d</span><span style="animation-delay:0.40s">a</span>
-          <span style="animation-delay:0.45s">&nbsp;</span>
-          <span style="animation-delay:0.50s">R</span><span style="animation-delay:0.55s">o</span><span style="animation-delay:0.60s">m</span><span style="animation-delay:0.65s">ã</span><span style="animation-delay:0.70s">o</span>
-        </h1>
+        <h1 class="hero-name">Fernanda Romão</h1>
  
         <p class="hero-brand">Mokshyaa · Desenvolvedora Fullstack & Designer</p>
- 
-        <p class="hero-tagline">"A flor que desabrocha na escuridão"</p>
- 
-        <p class="hero-phrase">
+  
+        <p class="hero-tagline">
           Código que carrega intenção.<br>
           Design que carrega presença.
         </p>
@@ -230,10 +224,19 @@
         <div class="projects-grid">
  
           <!-- Card 1: Spasso Manager -->
-          <article class="project-card reveal" data-tags="react firebase">
-            <div class="project-image">
-              <div class="img-placeholder">Spasso Manager · Preview</div>
-            </div>
+          <article class="project-card reveal" data-tags="react firebase"
+         data-project-url="#" tabindex="0" role="link"
+         aria-label="Abrir projeto Spasso Manager">
+  <div class="project-carousel" aria-roledescription="carrossel">
+    <div class="carousel-track">
+      <img class="carousel-slide is-active" src="assets/img/spasso/1.jpg" alt="Spasso Manager — tela 1" loading="lazy">
+      <img class="carousel-slide" src="assets/img/spasso/2.jpg" alt="Spasso Manager — tela 2" loading="lazy">
+      <img class="carousel-slide" src="assets/img/spasso/3.jpg" alt="Spasso Manager — tela 3" loading="lazy">
+    </div>
+    <button class="carousel-arrow carousel-prev" aria-label="Imagem anterior" type="button">‹</button>
+    <button class="carousel-arrow carousel-next" aria-label="Próxima imagem" type="button">›</button>
+    <div class="carousel-dots" role="tablist" aria-label="Selecionar imagem"></div>
+  </div>
             <div class="project-body">
               <h3 class="project-title">
                 Spasso Manager
@@ -561,7 +564,6 @@
         </div>
  
         <div class="services-ctas reveal">
-          <a href="#contato" class="btn-primary">Solicitar orçamento</a>
           <a href="#projetos" class="btn-outline">Ver projetos</a>
         </div>
       </div>

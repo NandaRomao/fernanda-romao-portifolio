@@ -594,3 +594,101 @@
       }, duration + delay + 100);
     }
   })();
+
+  // ==========================================
+  // === PROJECT CAROUSEL (Bloco D)
+  // ==========================================
+  (function() {
+    const AUTO_INTERVAL = 2200; // ms entre trocas no auto-play
+
+    const carousels = document.querySelectorAll('.project-carousel');
+
+    carousels.forEach(carousel => {
+      const card    = carousel.closest('.project-card');
+      const slides  = Array.from(carousel.querySelectorAll('.carousel-slide'));
+      const prevBtn = carousel.querySelector('.carousel-prev');
+      const nextBtn = carousel.querySelector('.carousel-next');
+      const dotsBox = carousel.querySelector('.carousel-dots');
+
+      let index = slides.findIndex(s => s.classList.contains('is-active'));
+      if (index < 0) index = 0;
+      let autoTimer = null;
+
+      // Carrossel de 1 imagem: esconde controles e sai
+      if (slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        return;
+      }
+
+      // Cria as bolinhas
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === index ? ' is-active' : '');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', 'Ir para imagem ' + (i + 1));
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          goTo(i);
+        });
+        dotsBox.appendChild(dot);
+      });
+      const dots = Array.from(dotsBox.children);
+
+      // Troca de slide
+      function goTo(newIndex) {
+        slides[index].classList.remove('is-active');
+        dots[index].classList.remove('is-active');
+        index = (newIndex + slides.length) % slides.length;
+        slides[index].classList.add('is-active');
+        dots[index].classList.add('is-active');
+      }
+      function next() { goTo(index + 1); }
+      function prev() { goTo(index - 1); }
+
+      // Setas (param o clique de abrir o card)
+      prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); restartAuto(); });
+      nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); restartAuto(); });
+
+      // Auto-play só durante o hover
+      function startAuto() {
+        if (autoTimer) return;
+        autoTimer = setInterval(next, AUTO_INTERVAL);
+      }
+      function stopAuto() {
+        clearInterval(autoTimer);
+        autoTimer = null;
+      }
+      function restartAuto() {
+        if (autoTimer) { stopAuto(); startAuto(); }
+      }
+
+      card.addEventListener('mouseenter', startAuto);
+      card.addEventListener('mouseleave', stopAuto);
+    });
+  })();
+
+  // ==========================================
+  // === ABRIR PROJETO AO CLICAR NO CARD (Bloco D)
+  // ==========================================
+  (function() {
+    const cards = document.querySelectorAll('.project-card[data-project-url]');
+
+    cards.forEach(card => {
+      const url = card.getAttribute('data-project-url');
+      if (!url || url === '#') return;
+
+      function open() { window.open(url, '_blank', 'noopener'); }
+
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a, button, [data-no-card]')) return;
+        open();
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') open();
+      });
+    });
+  })();
+  
+  
