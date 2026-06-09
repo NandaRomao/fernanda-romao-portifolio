@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mandarim — vocabulário técnico, cultura chinesa, traduções e a ponte Brasil-China. Por Fernanda Romão.">
+  <meta name="author" content="Fernanda Romão">
+  <meta name="theme-color" content="#F5ECD7">
+
+  <meta property="og:title" content="Mandarim · Mokshyaa — Fernanda Romão">
+  <meta property="og:description" content="Vocabulário dev em Mandarim, cultura chinesa e traduções.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <title>Mandarim · Mokshyaa</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>词</text></svg>">
+
+  <link rel="stylesheet" href="assets/css/mandarim.css">
+</head>
+
+<body>
+
+  <nav class="m-nav" id="mNav">
+    <div class="m-nav-container">
+      <a href="index.html" class="m-nav-back">← Voltar ao portfólio</a>
+      <a href="index.html" class="m-nav-logo">Mokshyaa</a>
+    </div>
+  </nav>
+
+  <header class="m-hero">
+    <div class="m-hero-content">
+      <h1 class="m-hero-title">词汇表</h1>
+      <p class="m-hero-subtitle">Mandarim</p>
+      <p class="m-hero-tagline">Tecnologia, cultura e a ponte que construo entre o Brasil e a China.</p>
+    </div>
+  </header>
+
+  <nav class="m-index" aria-label="Seções da página">
+    <div class="m-index-grid">
+      <a href="#vocabulario" class="m-index-block"><span class="m-index-char">词</span><span class="m-index-label">Vocabulário</span></a>
+      <a href="#china" class="m-index-block"><span class="m-index-char">国</span><span class="m-index-label">China</span></a>
+      <a href="#traducoes" class="m-index-block"><span class="m-index-char">译</span><span class="m-index-label">Traduções</span></a>
+      <a href="#agente-ia" class="m-index-block"><span class="m-index-char">智</span><span class="m-index-label">Agente de IA</span></a>
+      <a href="#instagram" class="m-index-block"><span class="m-index-char">享</span><span class="m-index-label">Instagram</span></a>
+    </div>
+  </nav>
+
+  <section class="m-section" id="vocabulario">
+    <span class="m-section-anchor" aria-hidden="true">词</span>
+    <div class="m-section-header">
+      <p class="m-section-eyebrow">技术词汇 · Dicionário técnico</p>
+      <h2 class="m-section-title">Vocabulário Dev <span class="zh">词汇表</span></h2>
+      <p class="m-section-desc">Termos técnicos em Português, English e 中文 — construídos durante meu estudo de Mandarim aplicado à tecnologia. Busque por palavra ou filtre por categoria.</p>
+    </div>
+
+    <div class="m-controls">
+      <div class="m-search-wrapper">
+        <span class="m-search-icon" aria-hidden="true">⌕</span>
+        <input type="search" id="vocabSearch" placeholder="Buscar termo... 搜索" aria-label="Buscar no vocabulário" autocomplete="off">
+      </div>
+      <div class="m-filters" id="vocabFilters">
+        <button class="m-filter-btn active" data-filter="all">Todos</button>
+        <button class="m-filter-btn" data-filter="geral">Geral</button>
+        <button class="m-filter-btn" data-filter="frontend">Frontend</button>
+        <button class="m-filter-btn" data-filter="backend">Backend</button>
+        <button class="m-filter-btn" data-filter="banco-de-dados">Banco de Dados</button>
+        <button class="m-filter-btn" data-filter="git">Git</button>
+        <button class="m-filter-btn" data-filter="redes">Redes</button>
+        <button class="m-filter-btn" data-filter="seguranca">Segurança</button>
+        <button class="m-filter-btn" data-filter="giria">Gíria Tech</button>
+      </div>
+    </div>
+
+    <p class="m-count" id="vocabCount">Exibindo 72 de 72 termos</p>
+    <p class="m-count-empty" id="vocabEmpty" hidden>Nenhum termo encontrado · 没有找到</p>
+
+    <div class="m-vocab-grid" id="vocabGrid">
+
+      <!-- ===================================================================
+           CARDS DE VOCABULÁRIO
+           Os 4 primeiros (变量 函数 循环 算法) são MODELOS RICOS completos.
+           Os demais são simples (só cabeçalho). Para enriquecer um termo,
+           copie a estrutura de um modelo rico. Guia completo: COMO-EDITAR.md
+      ==================================================================== -->
+
+      <!-- ===== MODELO 1: 变量 ===== -->
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="variável" data-en="variable" data-zh="变量" data-pinyin="biàn liàng">
+        <div class="m-card-head">
+          <div class="m-card-zh">变量</div>
+          <div class="m-card-pinyin">biàn liàng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">Variável</span>
+            <span class="m-card-en">Variable</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <p class="m-card-obs">Obs: também pode significar "inconstante/mutável" no sentido figurado.</p>
+          <div class="m-card-examples">
+            <div class="m-example">
+              <div class="m-example-zh">我声明了一个变量来存储用户名。</div>
+              <div class="m-example-pinyin">Wǒ shēngmíngle yīgè biànliàng lái cúnchǔ yònghùmíng.</div>
+              <div class="m-example-pt">Declarei uma variável para armazenar o nome do usuário.</div>
+            </div>
+            <div class="m-example">
+              <div class="m-example-zh">这个变量的值是空的。</div>
+              <div class="m-example-pinyin">Zhège biànliàng de zhí shì kōng de.</div>
+              <div class="m-example-pt">O valor dessa variável está nulo.</div>
+            </div>
+          </div>
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <!-- ===== MODELO 2: 函数 ===== -->
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="função" data-en="function" data-zh="函数" data-pinyin="hán shù">
+        <div class="m-card-head">
+          <div class="m-card-zh">函数</div>
+          <div class="m-card-pinyin">hán shù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">Função</span>
+            <span class="m-card-en">Function</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <p class="m-card-obs">Obs: termo formal; informalmente 功能 (gōngnéng) é usado para "funcionalidade".</p>
+          <div class="m-card-examples">
+            <div class="m-example">
+              <div class="m-example-zh">这个函数返回用户的年龄。</div>
+              <div class="m-example-pinyin">Zhège hánshù fǎnhuí yònghù de niánlíng.</div>
+              <div class="m-example-pt">Essa função retorna a idade do usuário.</div>
+            </div>
+            <div class="m-example">
+              <div class="m-example-zh">你调用了错误的函数。</div>
+              <div class="m-example-pinyin">Nǐ diàoyòngle cuòwù de hánshù.</div>
+              <div class="m-example-pt">Você chamou a função errada.</div>
+            </div>
+          </div>
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <!-- ===== MODELO 3: 循环 ===== -->
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="loop, ciclo" data-en="loop" data-zh="循环" data-pinyin="xún huán">
+        <div class="m-card-head">
+          <div class="m-card-zh">循环</div>
+          <div class="m-card-pinyin">xún huán</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">Loop</span>
+            <span class="m-card-en">Loop</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <p class="m-card-obs">Obs: também significa "ciclo" em contextos naturais e médicos.</p>
+          <div class="m-card-examples">
+            <div class="m-example">
+              <div class="m-example-zh">这个循环会一直运行到条件为假。</div>
+              <div class="m-example-pinyin">Zhège xúnhuán huì yīzhí yùnxíng dào tiáojiàn wèi jiǎ.</div>
+              <div class="m-example-pt">Esse loop vai rodar até a condição ser falsa.</div>
+            </div>
+            <div class="m-example">
+              <div class="m-example-zh">小心无限循环！</div>
+              <div class="m-example-pinyin">Xiǎoxīn wúxiàn xúnhuán!</div>
+              <div class="m-example-pt">Cuidado com loop infinito!</div>
+            </div>
+          </div>
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <!-- ===== MODELO 4: 算法 (com Obs expansível) ===== -->
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="algoritmo" data-en="algorithm" data-zh="算法" data-pinyin="suàn fǎ">
+        <div class="m-card-head">
+          <div class="m-card-zh">算法</div>
+          <div class="m-card-pinyin">suàn fǎ</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">Algoritmo</span>
+            <span class="m-card-en">Algorithm</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <p class="m-card-obs">Obs: usado tanto no contexto técnico quanto no cotidiano.</p>
+          <div class="m-card-examples">
+            <div class="m-example">
+              <div class="m-example-zh">我们需要优化这个算法。</div>
+              <div class="m-example-pinyin">Wǒmen xūyào yōuhuà zhège suànfǎ.</div>
+              <div class="m-example-pt">Precisamos otimizar esse algoritmo.</div>
+            </div>
+          </div>
+          <button class="m-card-toggle" aria-expanded="false">
+            <span class="arrow">▸</span><span class="label">mais</span>
+          </button>
+          <div class="m-card-detail">
+            <div class="m-card-detail-inner">
+              <div class="m-example">
+                <div class="m-example-zh">这个算法的时间复杂度是 O(n)。</div>
+                <div class="m-example-pinyin">Zhège suànfǎ de shíjiān fùzádù shì O(n).</div>
+                <div class="m-example-pt">A complexidade de tempo desse algoritmo é O(n).</div>
+              </div>
+            </div>
+          </div>
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="computador" data-en="computer" data-zh="电脑" data-pinyin="diàn nǎo">
+        <div class="m-card-head">
+          <div class="m-card-zh">电脑</div>
+          <div class="m-card-pinyin">diàn nǎo</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">computador</span>
+            <span class="m-card-en">computer</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="internet rede" data-en="network" data-zh="网络" data-pinyin="wǎng luò">
+        <div class="m-card-head">
+          <div class="m-card-zh">网络</div>
+          <div class="m-card-pinyin">wǎng luò</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">internet, rede</span>
+            <span class="m-card-en">network</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="software" data-en="software" data-zh="软件" data-pinyin="ruǎn jiàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">软件</div>
+          <div class="m-card-pinyin">ruǎn jiàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">software</span>
+            <span class="m-card-en">software</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="hardware" data-en="hardware" data-zh="硬件" data-pinyin="yìng jiàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">硬件</div>
+          <div class="m-card-pinyin">yìng jiàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">hardware</span>
+            <span class="m-card-en">hardware</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="programa codigo" data-en="program" data-zh="程序" data-pinyin="chéng xù">
+        <div class="m-card-head">
+          <div class="m-card-zh">程序</div>
+          <div class="m-card-pinyin">chéng xù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">programa, código</span>
+            <span class="m-card-en">program</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="codigo de programacao" data-en="code" data-zh="代码" data-pinyin="dài mǎ">
+        <div class="m-card-head">
+          <div class="m-card-zh">代码</div>
+          <div class="m-card-pinyin">dài mǎ</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">código (de programação)</span>
+            <span class="m-card-en">code</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="desenvolver desenvolvimento" data-en="develop" data-zh="开发" data-pinyin="kāi fā">
+        <div class="m-card-head">
+          <div class="m-card-zh">开发</div>
+          <div class="m-card-pinyin">kāi fā</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">desenvolver, desenvolvimento</span>
+            <span class="m-card-en">develop</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="aplicativo aplicacao" data-en="application" data-zh="应用" data-pinyin="yìng yòng">
+        <div class="m-card-head">
+          <div class="m-card-zh">应用</div>
+          <div class="m-card-pinyin">yìng yòng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">aplicativo, aplicação</span>
+            <span class="m-card-en">application</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="servidor" data-en="server" data-zh="服务器" data-pinyin="fú wù qì">
+        <div class="m-card-head">
+          <div class="m-card-zh">服务器</div>
+          <div class="m-card-pinyin">fú wù qì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">servidor</span>
+            <span class="m-card-en">server</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="computacao em nuvem" data-en="cloud computing" data-zh="云计算" data-pinyin="yún jì suàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">云计算</div>
+          <div class="m-card-pinyin">yún jì suàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">computação em nuvem</span>
+            <span class="m-card-en">cloud computing</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="inteligencia artificial" data-en="artificial intelligence" data-zh="人工智能" data-pinyin="rén gōng zhì néng">
+        <div class="m-card-head">
+          <div class="m-card-zh">人工智能</div>
+          <div class="m-card-pinyin">rén gōng zhì néng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">inteligência artificial</span>
+            <span class="m-card-en">artificial intelligence</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="big data" data-en="big data" data-zh="大数据" data-pinyin="dà shù jù">
+        <div class="m-card-head">
+          <div class="m-card-zh">大数据</div>
+          <div class="m-card-pinyin">dà shù jù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">big data</span>
+            <span class="m-card-en">big data</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="blockchain" data-en="blockchain" data-zh="区块链" data-pinyin="qū kuài liàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">区块链</div>
+          <div class="m-card-pinyin">qū kuài liàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">blockchain</span>
+            <span class="m-card-en">blockchain</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="atualizar upgrade" data-en="upgrade" data-zh="升级" data-pinyin="shēng jí">
+        <div class="m-card-head">
+          <div class="m-card-zh">升级</div>
+          <div class="m-card-pinyin">shēng jí</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">atualizar, upgrade</span>
+            <span class="m-card-en">upgrade</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="baixar download" data-en="download" data-zh="下载" data-pinyin="xià zǎi">
+        <div class="m-card-head">
+          <div class="m-card-zh">下载</div>
+          <div class="m-card-pinyin">xià zǎi</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">baixar, download</span>
+            <span class="m-card-en">download</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="enviar upload" data-en="upload" data-zh="上传" data-pinyin="shàng chuán">
+        <div class="m-card-head">
+          <div class="m-card-zh">上传</div>
+          <div class="m-card-pinyin">shàng chuán</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">enviar, upload</span>
+            <span class="m-card-en">upload</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="link conexao" data-en="link" data-zh="链接" data-pinyin="liàn jiē">
+        <div class="m-card-head">
+          <div class="m-card-zh">链接</div>
+          <div class="m-card-pinyin">liàn jiē</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">link, conexão</span>
+            <span class="m-card-en">link</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="conta de usuario" data-en="account" data-zh="账号" data-pinyin="zhàng hào">
+        <div class="m-card-head">
+          <div class="m-card-zh">账号</div>
+          <div class="m-card-pinyin">zhàng hào</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">conta (de usuário)</span>
+            <span class="m-card-en">account</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="senha" data-en="password" data-zh="密码" data-pinyin="mì mǎ">
+        <div class="m-card-head">
+          <div class="m-card-zh">密码</div>
+          <div class="m-card-pinyin">mì mǎ</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">senha</span>
+            <span class="m-card-en">password</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="login entrar" data-en="login" data-zh="登录" data-pinyin="dēng lù">
+        <div class="m-card-head">
+          <div class="m-card-zh">登录</div>
+          <div class="m-card-pinyin">dēng lù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">login, entrar</span>
+            <span class="m-card-en">login</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="registrar cadastro" data-en="register" data-zh="注册" data-pinyin="zhù cè">
+        <div class="m-card-head">
+          <div class="m-card-zh">注册</div>
+          <div class="m-card-pinyin">zhù cè</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">registrar, cadastro</span>
+            <span class="m-card-en">register</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="sair logout" data-en="logout" data-zh="退出" data-pinyin="tuì chū">
+        <div class="m-card-head">
+          <div class="m-card-zh">退出</div>
+          <div class="m-card-pinyin">tuì chū</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">sair, logout</span>
+            <span class="m-card-en">logout</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="interface" data-en="interface" data-zh="界面" data-pinyin="jiè miàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">界面</div>
+          <div class="m-card-pinyin">jiè miàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">interface</span>
+            <span class="m-card-en">interface</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="usuario" data-en="user" data-zh="用户" data-pinyin="yòng hù">
+        <div class="m-card-head">
+          <div class="m-card-zh">用户</div>
+          <div class="m-card-pinyin">yòng hù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">usuário</span>
+            <span class="m-card-en">user</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="dados" data-en="data" data-zh="数据" data-pinyin="shù jù">
+        <div class="m-card-head">
+          <div class="m-card-zh">数据</div>
+          <div class="m-card-pinyin">shù jù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">dados</span>
+            <span class="m-card-en">data</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="backup" data-en="backup" data-zh="备份" data-pinyin="bèi fèn">
+        <div class="m-card-head">
+          <div class="m-card-zh">备份</div>
+          <div class="m-card-pinyin">bèi fèn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">backup</span>
+            <span class="m-card-en">backup</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="criptografar encriptar" data-en="encrypt" data-zh="加密" data-pinyin="jiā mì">
+        <div class="m-card-head">
+          <div class="m-card-zh">加密</div>
+          <div class="m-card-pinyin">jiā mì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">criptografar, encriptar</span>
+            <span class="m-card-en">encrypt</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="descriptografar decifrar" data-en="decrypt" data-zh="解密" data-pinyin="jiě mì">
+        <div class="m-card-head">
+          <div class="m-card-zh">解密</div>
+          <div class="m-card-pinyin">jiě mì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">descriptografar, decifrar</span>
+            <span class="m-card-en">decrypt</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="inteligente smart" data-en="smart" data-zh="智能" data-pinyin="zhì néng">
+        <div class="m-card-head">
+          <div class="m-card-zh">智能</div>
+          <div class="m-card-pinyin">zhì néng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">inteligente (smart)</span>
+            <span class="m-card-en">smart</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="robo" data-en="robot" data-zh="机器人" data-pinyin="jī qì rén">
+        <div class="m-card-head">
+          <div class="m-card-zh">机器人</div>
+          <div class="m-card-pinyin">jī qì rén</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">robô</span>
+            <span class="m-card-en">robot</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="plataforma" data-en="platform" data-zh="平台" data-pinyin="píng tái">
+        <div class="m-card-head">
+          <div class="m-card-zh">平台</div>
+          <div class="m-card-pinyin">píng tái</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">plataforma</span>
+            <span class="m-card-en">platform</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="depurar debug" data-en="debug" data-zh="调试" data-pinyin="tiáo shì">
+        <div class="m-card-head">
+          <div class="m-card-zh">调试</div>
+          <div class="m-card-pinyin">tiáo shì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">depurar, debug</span>
+            <span class="m-card-en">debug</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="compilar" data-en="compile" data-zh="编译" data-pinyin="biān yì">
+        <div class="m-card-head">
+          <div class="m-card-zh">编译</div>
+          <div class="m-card-pinyin">biān yì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">compilar</span>
+            <span class="m-card-en">compile</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="condicao programacao" data-en="condition" data-zh="条件" data-pinyin="tiáo jiàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">条件</div>
+          <div class="m-card-pinyin">tiáo jiàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">condição (programação)</span>
+            <span class="m-card-en">condition</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="classe poo" data-en="class" data-zh="类" data-pinyin="lèi">
+        <div class="m-card-head">
+          <div class="m-card-zh">类</div>
+          <div class="m-card-pinyin">lèi</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">classe (POO)</span>
+            <span class="m-card-en">class</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="objeto poo  alvo" data-en="object" data-zh="对象" data-pinyin="duì xiàng">
+        <div class="m-card-head">
+          <div class="m-card-zh">对象</div>
+          <div class="m-card-pinyin">duì xiàng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">objeto (POO) / alvo</span>
+            <span class="m-card-en">object</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="documentacao" data-en="documentation" data-zh="文档" data-pinyin="wén dàng">
+        <div class="m-card-head">
+          <div class="m-card-zh">文档</div>
+          <div class="m-card-pinyin">wén dàng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">documentação</span>
+            <span class="m-card-en">documentation</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="deploy implantar" data-en="deploy" data-zh="部署" data-pinyin="bù shǔ">
+        <div class="m-card-head">
+          <div class="m-card-zh">部署</div>
+          <div class="m-card-pinyin">bù shǔ</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">deploy, implantar</span>
+            <span class="m-card-en">deploy</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="ambiente devprodtest" data-en="environment" data-zh="环境" data-pinyin="huán jìng">
+        <div class="m-card-head">
+          <div class="m-card-zh">环境</div>
+          <div class="m-card-pinyin">huán jìng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">ambiente (dev/prod/test)</span>
+            <span class="m-card-en">environment</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="log registro" data-en="log" data-zh="日志" data-pinyin="rì zhì">
+        <div class="m-card-head">
+          <div class="m-card-zh">日志</div>
+          <div class="m-card-pinyin">rì zhì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">log, registro</span>
+            <span class="m-card-en">log</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="container docker" data-en="container" data-zh="容器" data-pinyin="róng qì">
+        <div class="m-card-head">
+          <div class="m-card-zh">容器</div>
+          <div class="m-card-pinyin">róng qì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">container (Docker)</span>
+            <span class="m-card-en">container</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="entrevista de emprego" data-en="interview" data-zh="面试" data-pinyin="miàn shì">
+        <div class="m-card-head">
+          <div class="m-card-zh">面试</div>
+          <div class="m-card-pinyin">miàn shì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">entrevista (de emprego)</span>
+            <span class="m-card-en">interview</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="portfolio" data-en="portfolio" data-zh="作品集" data-pinyin="zuò pǐn jí">
+        <div class="m-card-head">
+          <div class="m-card-zh">作品集</div>
+          <div class="m-card-pinyin">zuò pǐn jí</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">portfólio</span>
+            <span class="m-card-en">portfolio</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="estagiarioa" data-en="intern" data-zh="实习生" data-pinyin="shí xí shēng">
+        <div class="m-card-head">
+          <div class="m-card-zh">实习生</div>
+          <div class="m-card-pinyin">shí xí shēng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">estagiário/a</span>
+            <span class="m-card-en">intern</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="geral" data-pt="freelancer" data-en="freelancer" data-zh="自由职业者" data-pinyin="zì yóu zhí yè zhě">
+        <div class="m-card-head">
+          <div class="m-card-zh">自由职业者</div>
+          <div class="m-card-pinyin">zì yóu zhí yè zhě</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">freelancer</span>
+            <span class="m-card-en">freelancer</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Geral</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="frontend" data-pt="frontend" data-en="frontend" data-zh="前端" data-pinyin="qián duān">
+        <div class="m-card-head">
+          <div class="m-card-zh">前端</div>
+          <div class="m-card-pinyin">qián duān</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">front-end</span>
+            <span class="m-card-en">front-end</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Frontend</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="backend" data-pt="backend" data-en="backend" data-zh="后端" data-pinyin="hòu duān">
+        <div class="m-card-head">
+          <div class="m-card-zh">后端</div>
+          <div class="m-card-pinyin">hòu duān</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">back-end</span>
+            <span class="m-card-en">back-end</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Backend</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="banco-de-dados" data-pt="banco de dados" data-en="database" data-zh="数据库" data-pinyin="shù jù kù">
+        <div class="m-card-head">
+          <div class="m-card-zh">数据库</div>
+          <div class="m-card-pinyin">shù jù kù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">banco de dados</span>
+            <span class="m-card-en">database</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Banco de Dados</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="banco-de-dados" data-pt="consulta query" data-en="query" data-zh="查询" data-pinyin="chá xún">
+        <div class="m-card-head">
+          <div class="m-card-zh">查询</div>
+          <div class="m-card-pinyin">chá xún</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">consulta, query</span>
+            <span class="m-card-en">query</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Banco de Dados</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="git" data-pt="repositorio git" data-en="repository" data-zh="仓库" data-pinyin="cāng kù">
+        <div class="m-card-head">
+          <div class="m-card-zh">仓库</div>
+          <div class="m-card-pinyin">cāng kù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">repositório (Git)</span>
+            <span class="m-card-en">repository</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Git</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="git" data-pt="commit git" data-en="commit" data-zh="提交" data-pinyin="tí jiāo">
+        <div class="m-card-head">
+          <div class="m-card-zh">提交</div>
+          <div class="m-card-pinyin">tí jiāo</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">commit (Git)</span>
+            <span class="m-card-en">commit</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Git</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="git" data-pt="branch git" data-en="branch" data-zh="分支" data-pinyin="fēn zhī">
+        <div class="m-card-head">
+          <div class="m-card-zh">分支</div>
+          <div class="m-card-pinyin">fēn zhī</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">branch (Git)</span>
+            <span class="m-card-en">branch</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Git</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="git" data-pt="merge git" data-en="merge" data-zh="合并" data-pinyin="hé bìng">
+        <div class="m-card-head">
+          <div class="m-card-zh">合并</div>
+          <div class="m-card-pinyin">hé bìng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">merge (Git)</span>
+            <span class="m-card-en">merge</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Git</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="redes" data-pt="firewall" data-en="firewall" data-zh="防火墙" data-pinyin="fáng huǒ qiáng">
+        <div class="m-card-head">
+          <div class="m-card-zh">防火墙</div>
+          <div class="m-card-pinyin">fáng huǒ qiáng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">firewall</span>
+            <span class="m-card-en">firewall</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Redes</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="seguranca" data-pt="ataque ciberseguranca" data-en="attack" data-zh="攻击" data-pinyin="gōng jī">
+        <div class="m-card-head">
+          <div class="m-card-zh">攻击</div>
+          <div class="m-card-pinyin">gōng jī</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">ataque (cibersegurança)</span>
+            <span class="m-card-en">attack</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Segurança</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="seguranca" data-pt="autenticacao" data-en="authentication" data-zh="身份验证" data-pinyin="shēn fèn yàn zhèng">
+        <div class="m-card-head">
+          <div class="m-card-zh">身份验证</div>
+          <div class="m-card-pinyin">shēn fèn yàn zhèng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">autenticação</span>
+            <span class="m-card-en">authentication</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Segurança</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="seguranca" data-pt="pentest teste de penetracao" data-en="penetration testing" data-zh="渗透测试" data-pinyin="shèn tòu cè shì">
+        <div class="m-card-head">
+          <div class="m-card-zh">渗透测试</div>
+          <div class="m-card-pinyin">shèn tòu cè shì</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">pentest, teste de penetração</span>
+            <span class="m-card-en">penetration testing</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Segurança</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="incrivel que demais giria" data-en="awesome slang" data-zh="666" data-pinyin="liù liù liù">
+        <div class="m-card-head">
+          <div class="m-card-zh">666</div>
+          <div class="m-card-pinyin">liù liù liù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">incrível, que demais! (gíria)</span>
+            <span class="m-card-en">awesome (slang)</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="tchau ate mais giria de chat" data-en="byebye slang" data-zh="886" data-pinyin="bā bā liù">
+        <div class="m-card-head">
+          <div class="m-card-zh">886</div>
+          <div class="m-card-pinyin">bā bā liù</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">tchau, até mais (gíria de chat)</span>
+            <span class="m-card-en">bye-bye (slang)</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="noob iniciante giria" data-en="noob slang" data-zh="菜鸟" data-pinyin="cài niǎo">
+        <div class="m-card-head">
+          <div class="m-card-zh">菜鸟</div>
+          <div class="m-card-pinyin">cài niǎo</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">noob, iniciante (gíria)</span>
+            <span class="m-card-en">noob (slang)</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="afk  away from keyboard" data-en="afk" data-zh="挂机" data-pinyin="guà jī">
+        <div class="m-card-head">
+          <div class="m-card-zh">挂机</div>
+          <div class="m-card-pinyin">guà jī</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">AFK — away from keyboard</span>
+            <span class="m-card-en">AFK</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="viralizar giria de internet" data-en="go viral" data-zh="爆火" data-pinyin="bào huǒ">
+        <div class="m-card-head">
+          <div class="m-card-zh">爆火</div>
+          <div class="m-card-pinyin">bào huǒ</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">viralizar (gíria de internet)</span>
+            <span class="m-card-en">go viral</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="troll hater giria de internet" data-en="troll hater" data-zh="喷子" data-pinyin="pēn zi">
+        <div class="m-card-head">
+          <div class="m-card-zh">喷子</div>
+          <div class="m-card-pinyin">pēn zi</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">troll, hater (gíria de internet)</span>
+            <span class="m-card-en">troll, hater</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="live transmissao ao vivo" data-en="livestream" data-zh="直播" data-pinyin="zhí bō">
+        <div class="m-card-head">
+          <div class="m-card-zh">直播</div>
+          <div class="m-card-pinyin">zhí bō</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">live, transmissão ao vivo</span>
+            <span class="m-card-en">livestream</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="curtir like" data-en="like" data-zh="点赞" data-pinyin="diǎn zàn">
+        <div class="m-card-head">
+          <div class="m-card-zh">点赞</div>
+          <div class="m-card-pinyin">diǎn zàn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">curtir, like</span>
+            <span class="m-card-en">like</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="fa seguidor" data-en="fan follower" data-zh="粉丝" data-pinyin="fěn sī">
+        <div class="m-card-head">
+          <div class="m-card-zh">粉丝</div>
+          <div class="m-card-pinyin">fěn sī</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">fã, seguidor</span>
+            <span class="m-card-en">fan, follower</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="influencer famoso na internet" data-en="influencer" data-zh="网红" data-pinyin="wǎng hóng">
+        <div class="m-card-head">
+          <div class="m-card-zh">网红</div>
+          <div class="m-card-pinyin">wǎng hóng</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">influencer, famoso na internet</span>
+            <span class="m-card-en">influencer</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+
+      <article class="m-vocab-card reveal" data-category="giria" data-pt="lag travar gamesstreaming" data-en="lag" data-zh="卡顿" data-pinyin="kǎ dùn">
+        <div class="m-card-head">
+          <div class="m-card-zh">卡顿</div>
+          <div class="m-card-pinyin">kǎ dùn</div>
+          <div class="m-card-trans">
+            <span class="m-card-pt">lag, travar (games/streaming)</span>
+            <span class="m-card-en">lag</span>
+          </div>
+        </div>
+        <div class="m-card-body">
+          <span class="m-card-badge">Gíria Tech</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="m-divider">
+
+  <section class="m-section" id="china">
+    <span class="m-section-anchor" aria-hidden="true">国</span>
+    <div class="m-section-header">
+      <p class="m-section-eyebrow">文化 · Cultura</p>
+      <h2 class="m-section-title">China <span class="zh">中国</span></h2>
+      <p class="m-section-desc">Reflexões, descobertas e pontes culturais entre o Brasil e a China — parte do projeto Decodificando China.</p>
+    </div>
+    <div class="m-placeholder">
+      <div class="m-placeholder-icon" aria-hidden="true">中</div>
+      <p class="m-placeholder-text">Em breve: conteúdo sobre cultura, língua e a ponte Brasil-China que venho construindo.</p>
+      <span class="m-placeholder-tag">Em breve</span>
+    </div>
+  </section>
+
+  <hr class="m-divider">
+
+  <section class="m-section" id="traducoes">
+    <span class="m-section-anchor" aria-hidden="true">译</span>
+    <div class="m-section-header">
+      <p class="m-section-eyebrow">翻译 · Tradução</p>
+      <h2 class="m-section-title">Traduções <span class="zh">翻译</span></h2>
+      <p class="m-section-desc">Textos que traduzi — do chinês ao português e vice-versa. Tradução feita por quem entende o idioma e o contexto.</p>
+    </div>
+    <div class="m-placeholder">
+      <div class="m-placeholder-icon" aria-hidden="true">文</div>
+      <p class="m-placeholder-text">Em breve: uma seleção de textos traduzidos, com o original e a versão em português.</p>
+      <span class="m-placeholder-tag">Em breve</span>
+    </div>
+  </section>
+
+  <hr class="m-divider">
+
+  <section class="m-section" id="agente-ia">
+    <span class="m-section-anchor" aria-hidden="true">智</span>
+    <div class="m-section-header">
+      <p class="m-section-eyebrow">人工智能 · IA</p>
+      <h2 class="m-section-title">Agente de IA <span class="zh">智能体</span></h2>
+      <p class="m-section-desc">Um agente de inteligência artificial aplicado ao estudo de Mandarim e à ponte cultural.</p>
+    </div>
+    <div class="m-placeholder">
+      <div class="m-placeholder-icon" aria-hidden="true">智</div>
+      <p class="m-placeholder-text">Em breve: o agente de IA que estou desenvolvendo, trazido para dentro do portfólio.</p>
+      <span class="m-placeholder-tag">Em breve</span>
+    </div>
+  </section>
+
+  <hr class="m-divider">
+
+  <section class="m-section" id="instagram">
+    <span class="m-section-anchor" aria-hidden="true">享</span>
+    <div class="m-section-header">
+      <p class="m-section-eyebrow">分享 · Compartilhar</p>
+      <h2 class="m-section-title">Instagram <span class="zh">分享</span></h2>
+      <p class="m-section-desc">O conteúdo que compartilho sobre Mandarim, China e tecnologia — trazido para cá.</p>
+    </div>
+    <div class="m-placeholder">
+      <div class="m-placeholder-icon" aria-hidden="true">享</div>
+      <p class="m-placeholder-text">Em breve: integração com a página do Instagram que vou colocar em prática.</p>
+      <span class="m-placeholder-tag">Em breve</span>
+    </div>
+  </section>
+
+  <footer class="m-footer">
+    <div class="m-footer-brand">Mokshyaa</div>
+    <a href="index.html">← Voltar ao portfólio · © Fernanda Romão 2026</a>
+  </footer>
+
+  <button class="m-scroll-top" id="mScrollTop" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <script src="assets/js/mandarim.js" defer></script>
+
+</body>
+</html>
